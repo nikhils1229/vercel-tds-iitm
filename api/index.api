@@ -24,7 +24,7 @@ STUDENT_MARKS_DATA = [
 # Create a dictionary for quick lookup by name
 marks_lookup = {student["name"]: student["mark"] for student in STUDENT_MARKS_DATA}
 
-@app.get("/api")
+@app.get("/")
 async def get_student_marks(
     name: list[str] = Query(..., description="List of student names to retrieve marks for.")
 ):
